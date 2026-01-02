@@ -168,6 +168,7 @@ header .hamburger{
     justify-content: right;
     align-items: center;
     position: relative;
+    overflow-x: hidden;
 }
 .index::before{
     content: '';
@@ -176,6 +177,7 @@ header .hamburger{
     height: 100%;
     position: absolute;
     z-index: 1;
+    overflow-x: hidden;
 }
 .index .title{
     width: 35%;
@@ -611,6 +613,7 @@ header .hamburger{
     border-radius: 50%;
     transition: all 500ms ease;
     border: none;
+    z-index: 3;
    
 }
 .section-button .button-sect:hover{
@@ -881,7 +884,7 @@ header {
 }
 .index{
     width: 100%;
-    min-height: 65vh;
+    min-height: 45vh;
     background-image: url('../img/vehiculo-en-la-carretera.jpg');
     background-size: cover;
     background-repeat: no-repeat;
