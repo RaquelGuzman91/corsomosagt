@@ -318,7 +318,7 @@ header .hamburger{
     gap: 1rem;
 }
 .phrase .section-form .form-container form .form-input .input-label label{
-    font-size: .9rem;
+    font-size: 1rem;
     font-family: "Roboto", sans-serif;
     text-transform: capitalize;
     font-weight: 700;
@@ -350,7 +350,7 @@ header .hamburger{
 }
 .phrase .section-form .form-container form .form-textarea .input-textarea label{
     padding-bottom: .5rem;
-    font-size: .9rem;
+    font-size: 1rem;
     font-family: "Roboto", sans-serif;
     text-transform: capitalize;
     font-weight: 700;
