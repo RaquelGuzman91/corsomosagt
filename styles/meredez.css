@@ -372,6 +372,7 @@ header .hamburger{
     color: white;
     border-radius: 50%;
     transition: all 500ms ease;
+    border: none;
 }
 .section-button .button-sect:hover{
     background: #3a3a3a;
