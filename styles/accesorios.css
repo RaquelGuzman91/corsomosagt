@@ -229,6 +229,7 @@ header .hamburger{
 .workshop{
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 5rem 1rem;
@@ -653,6 +654,9 @@ header {
 }
 .index{
     margin-top: 9.5rem;
+}
+.index{
+    background-image: url('../img/index-repuestos-min-phoneotablet2.jpg');
 }
 }
 @media(max-width:409px){

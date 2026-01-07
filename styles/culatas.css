@@ -649,6 +649,7 @@ header {
     box-shadow: 5px  5px 20px rgba(54, 54, 54, 0.4);
 }
 .index{
+    background-image: url('../img/index-repuestos-min-phoneotablet2.jpg');
     margin-top: 9.5rem;
 }
 }
