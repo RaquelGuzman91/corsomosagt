@@ -387,6 +387,12 @@ header .hamburger{
     padding: 1rem 2rem;
     border-radius: 40px;
     border: none;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+.phrase .section-form .form-container form .button-form button:hover{
+    background: #131E31;
+    color: white;
 }
 /*-----     form-info  ------*/
 .phrase .section-form .form-info{
