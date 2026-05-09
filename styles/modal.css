@@ -1,0 +1,39 @@
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+.show {
+    display: flex;              /* usamos flexbox */
+    justify-content: center;    /* centrado horizontal */
+    align-items: center;        /* centrado vertical */
+    position: fixed;            /* se queda fijo en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;                /* ocupa todo el ancho */
+    height: 100%;               /* ocupa todo el alto */
+    background: rgba(0,0,0,0.4);/* fondo semitransparente */
+    z-index: 9999;              /* encima de todo */
+  }
+   #custom-alert {
+    min-width: 300px;
+    max-width: 500px;
+    text-align: center;
+    background: #ff9b05; /* naranja fue enviado */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-family: sans-serif;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    z-index: 200;
+    position: absolute;
+    white-space: pre-line; /* respeta los \n */
+  }
+  #custom-alert.show {
+    opacity: 1;
+  }
+  .hidden {
+    display: none;
+  }

@@ -12,6 +12,10 @@ export default function menuHamburger (btnHamburger, navLink, menuLink){
         if(e.target.matches(menuLink)){
             d.querySelector(navLink).classList.remove("is-active");
             d.querySelector(btnHamburger).classList.remove("is-active");
+            e.preventDefault();
+            setTimeout(() => {
+                window.location.href = e.target.href;
+            }, 400);
         }else{
             headerBg.classList.add()
         }

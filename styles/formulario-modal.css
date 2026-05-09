@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Oculto por defecto */
+.modal {
+display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: .5rem;
+    /* Fondo semi-transparente */
+}
+
+/* Caja del formulario */
+.modal-content {
+  background: white;
+  margin: auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 600px;
+  border-radius: 8px;
+  position: relative;
+}
+.modal-content h2{
+    font-family: "Open Sans", sans-serif;
+    padding-bottom: 1rem;
+    color: #23325F;
+}
+.modal-content form{
+display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+font-family: "Open Sans", sans-serif;
+gap: .5rem;
+}
+.modal-content form .input-grid{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center ;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    margin-bottom: .3rem;
+}
+.modal-content form label{
+    text-transform: capitalize;
+    font-size: .9rem;
+    font-weight: 600;
+}
+/*------quitar flechas en input numbers-------*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+.modal-content form span{
+    color: #ff9b05;
+}
+.modal-content form .input-grid .input-grid,
+.modal-content form input{
+width: 100%;
+padding: .5rem;
+font-size: .9rem;
+border: 1px solid #23325F;
+border-radius: 5px;
+outline: none;
+font-weight: 100;
+}
+.modal-content form .button-form{
+background: #23325F;
+color: white;
+padding: 1rem;
+font-size: 1rem;
+border: none;
+margin-top: 1.5rem;
+cursor: pointer;
+transition: all 500ms ease;
+}
+.modal-content form .button-form:hover{
+background: #595957;
+}
+/* Botón cerrar */
+.close {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 2.5rem;
+  cursor: pointer;
+}

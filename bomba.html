@@ -7,8 +7,14 @@
     <meta name="description" content="Desarrollo web Html, Css y JavaScript">
     <meta name="keywords" content="código, HTML, y más">   <meta name="Url" content="">
     <title>Corsomosa | Bombas</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon-x-08.png">
+    <link rel="icon" type="image/x-icon" href="img/favicon-x-08editado.png">
     <link rel="stylesheet" href="styles/bomba.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/iconsbutton-styles.css">
+    <link rel="stylesheet" href="styles/formulario-modal.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    
     <!-- -- iconos fontsawesome ------>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!---- -->
@@ -26,13 +32,13 @@
         <section class="networks">
             <article class="links">
                 <h2>Siguenos</h2>
-                <a href="https://www.facebook.com/tuUsuarioFacebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/tuUsuarioFacebook" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="mailto:tuCorreo@ejemplo.com?subject=Consulta%20de%20repuestos%20Web&body=Hola,%20necesito%20más%20información%20sobre%20repuestos." target="_blank"><i class="fa-regular fa-envelope"></i></a>
+                <a href="https://www.facebook.com/tuUsuarioFacebook" target="_blank" rel="no-referrer"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/tuUsuarioFacebook" target="_blank" rel="no-referrer"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:tuCorreo@ejemplo.com?subject=Consulta%20de%20repuestos%20Web&body=Hola,%20necesito%20más%20información%20sobre%20repuestos." target="_blank" rel="no-referrer"><i class="fa-regular fa-envelope"></i></a>
             </article>
             <article class="info">
-                <span><i class="fa-solid fa-location-dot"></i><a href="https://maps.app.goo.gl/ShfzEJKvdJ9ievv99" target="_blank">Ubicación</a></span>
-                <span><i class="fa-solid fa-phone"></i><a href="tel:+50212345678" target="_blank">Llamanos ahora</a></span>
+                <span><i class="fa-solid fa-location-dot"></i><a href="https://maps.app.goo.gl/ShfzEJKvdJ9ievv99" target="_blank" rel="no-referrer">Ubicación</a></span>
+                <span><i class="fa-solid fa-phone"></i><a href="tel:+50212345678" target="_blank" rel="no-referrer">Llamanos ahora</a></span>
             </article>
         </section>
 
@@ -49,9 +55,9 @@
                   <li><a class="menu_link" href="service.html">Servicios</a></li>
                   <li><a class="menu_link" href="contact.html">Contacto</a></li>
                 </ul>
-                <li><span><a class="button-nav" href="https://ul.waze.com/ul?venue_id=176554130.1765868982.37244553&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank"><i class="fa-brands fa-whatsapp"></i>Como Llegar</a></span></li>
+                <li><span><a class="button-nav" href="https://ul.waze.com/ul?venue_id=176554130.1765868982.37244553&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location&navigate=yes" target="_blank"><i class="fa-brands fa-waze"></i>Como Llegar</a></span></li>
             <!----- NAV-RESPONSIVE  ------>
-                <button class="hamburger hamburger--vortex" type="button">
+                <button class="hamburger hamburger--squeeze" type="button">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
                     </span>
@@ -78,12 +84,70 @@
         </div>
     </section>
 
-    
-    <!----  section-taller   ----->
-    <section class="workshop">
-        <div class="container-worshop">
+    <div class="overlay-filter" id="overlay-filter"></div>
+    <!---- ------>
 
-             <article class="box">
+
+    <!----- FORMULARIO-FLOTANTE  ---->
+    <!------ FORMULARIO DE COMPRA  ------->
+        <article  id="modal" class="modal">
+            <div  class="modal-content">
+                <h2>Formulario de compra</h2>
+                <span id="closeBtn" class="close">&times;</span>
+            <form name="contact-form" method="post" action="">
+                <figure class="input-grid">
+                    <label for="">nombre completo <span>*</span></label>
+                    <input class="input-grid" type="text" name="nombre" placeholder="Nombre del cliene" inputmode="text" required>
+                    <label for="">telefono <span>*</span></label>
+                    <input class="input-grid" type="tel"  name="telefono" placeholder="Telefono" pattern="\d{8}" maxlength="8" inputmode="numeric" required>
+                </figure>
+                <label for="">dirección de entrega <span>*</span></label>
+                <input type="text" name="direccion" placeholder="Direccion" inputmode="text" required>
+                <label for="">Correo electroníco <span>*</span></label>
+                <input type="email" name="correo" placeholder="Correo electronico" inputmode="email" required>
+                <label for="">cantidad <span>*</span></label>
+                <input type="number" min="0" name="cantidad" placeholder="cantidad" inputmode="numeric" required>
+                <label for="">repuesto <span>*</span></label>
+                <input type="text" name="repuesto" id="repuestoInput" readonly>
+                <button class="button-form" type="submit">Enviar solicitud de compra</button>
+            </form>
+            </div>
+
+            <!-- Contenedor para el mensaje -->
+        <div id="custom-alert" class="hidden"></div>
+        </article>
+
+
+       
+
+
+
+    <!----  SECCION-REPUESTOS   ----->
+    <section class="workshop">
+         <main class="" id="">
+            <ul class="ul-link" id="main">
+                <a class="close-filter" id="close-filter" href="#" data-filter="all"><i class="fa-solid fa-xmark"></i></a>
+                <li><i class="fa-solid fa-square"></i><a href="#" data-filter="all">todo</a></li>
+                <li><i class="fa-solid fa-square"></i><a href="#" data-filter="agua">bomba de agua</a></li>
+                <li><i class="fa-solid fa-square"></i><a href="#" data-filter="aceite">bomba de aceite</a></li>
+                <li><i class="fa-solid fa-square"></i><a href="#" data-filter="hidraulica">bomba hidraulica</a></li>
+                <li><i class="fa-solid fa-square"></i><a href="#" data-filter="transferencia">bomba de transferencia</a></li>
+                <li><i class="fa-solid fa-square"></i><a href="#" data-filter="auxiliar">bomba auxiliara</a></li>
+                <li><i class="fa-solid fa-square"></i><a href="#" data-filter="central">bomba central</a></li>
+                <li><i class="fa-solid fa-square"></i><a href="#" data-filter="pedal">pedal para bomba</a></li>
+                <li><i class="fa-solid fa-square"></i><a href="#" data-filter="secador">secador de aire</a></li>
+            </ul>
+        </main>
+
+        <div class="workshop-open">
+            <button href="" class="open-filter" id="open-filter">FILTRAR<i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+            <a class="data-all" href="#" data-filter="all">Mostar Todos los repuestos</a>
+        </div>
+
+        <!----  seccion-repuestos    ---->
+        <div class="container-worshop" id="repuestos">
+
+             <article class="box" id="box" data-category="agua">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/bombadeagua2.jpg" alt="">
@@ -93,11 +157,11 @@
                 <div class="box-info">
                     <h2>Bomba de agua</h2>
                     <p>para motor 14 litros DDEC 4</p>
-                    <a  href="https://wa.me/50247764240?text=Hola%20quiero%20más%20información%20sobre%20bomba%20de%20agua%20para%20motor%2014%20litros%20DDC4" target="_blank"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="bomba de agua para motor 14 litros DDEC 4" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-            <article class="box">
+            <article class="box" id="box" data-category="agua">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/Bomba de agua2.webp" alt="">
@@ -107,11 +171,11 @@
                 <div class="box-info">
                     <h2>bomba de agua</h2>
                     <p>para motor 14 litros DDEC 5</p>
-                    <a href="https://wa.me/50247764240?text=Hola%20quiero%20más%20información%20sobre%20bomba%20de%20agua%20para%20motor%2014%20litros%20DDC5" target="_blank"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="bomba de agua para motor 14 litros DDEC 5" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-            <article class="box">
+            <article class="box" id="box" data-category="agua">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/bombadeaguaDDEC6-2.jpg" alt="">
@@ -121,11 +185,11 @@
                 <div class="box-info">
                     <h2>Bomba de agua</h2>
                     <p>para motor 14litros DDEC 6</p>
-                    <a href="https://wa.me/50247764240?text=Hola%20quiero%20más%20información%20sobre%20bomba%20de%20agua%20para%20motor%2014%20litros%20DDC6" target="_blank"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="bomba de agua para motor 14litros DDEC 6" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-            <article class="box">
+            <article class="box" id="box" data-category="agua">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/bombadeagua DD13-2.jpg" alt="">
@@ -135,11 +199,11 @@
                 <div class="box-info">
                     <h2>Bomba de agua</h2>
                     <p>para DD13 marca TDP</p>
-                    <a href="https://wa.me/50247764240?text=Hola%20quiero%20más%20información%20sobre%20bomba%20de%20agua%20para%20DD13%20marca%20TDP" target="_blank"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="bomba de agua para DD13 marca TDP" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-            <article class="box">
+            <article class="box" id="box" data-category="aceite">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/bombadeaceitedetroitDDEC3-2.jpg" alt="">
@@ -149,11 +213,11 @@
                 <div class="box-info">
                     <h2>Bomba de aceite</h2>
                     <p>para motor Detroit 12.7 DDEC 3</p>
-                    <a href="https://wa.me/50247764240?text=Hola%20quiero%20más%20información%20sobre%20bomba%20de%20aceite%20para%20motor%20detroit%2012.7%20DD13%20marca%20TDP" target="_blank"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="bomba de aceite para motor Detroit 12.7 DDEC 3" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-            <article class="box">
+            <article class="box" id="box" data-category="aceite">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/bombadeaceiteDDEC4-2.jpg" alt="">
@@ -163,11 +227,11 @@
                 <div class="box-info">
                     <h2>Bomba de aceite</h2>
                     <p>para motor Detroit 12.7 DDEC 4</p>
-                    <a href="https://wa.me/50247764240?text=Hola%20quiero%20más%20información%20sobre%20bomba%20de%20aceite%20para%20motor%20Detroit12.7%20DDEC4%20marca%20TDP" target="_blank"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="Bomba de aceite para motor Detroit 12.7 DDEC 4" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-           <article class="box">
+           <article class="box" id="box" data-category="aceite">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/bombadeaceiteTDP2.jpg" alt="">
@@ -177,11 +241,11 @@
                 <div class="box-info">
                     <h2>Bomba de aceite</h2>
                     <p>para DD15 marca TDP</p>
-                    <a href="https://wa.me/50247764240?text=Hola%20quiero%20más%20información%20sobre%20bomba%20de%20aceite%20para%20dd15%20marca%20DDEC4%20TDP" target="_blank"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="Bomba de aceite para DD15 marca TDP" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-            <article class="box">
+            <article class="box" id="box" data-category="aceite">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/bombadeaceite2.jpg" alt="">
@@ -191,11 +255,11 @@
                 <div class="box-info">
                     <h2>Bomba de aceite</h2>
                     <p>para motor Detroit DD15</p>
-                    <a href="https://wa.me/50247764240?text=Hola%20quiero%20más%20información%20sobre%20bomba%20de%20aceite%20para%20dd15%20motor%20detroit%20DD15" target="_blank"></i>Cotizar ahora</a>
+                    <button data-producto="Bomba de aceite para motor Detroit DD15" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-            <article class="box">
+            <article class="box" id="box" data-category="aceite">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/bombadeaceiteDDC15-2.webp" alt="">
@@ -205,11 +269,11 @@
                 <div class="box-info">
                     <h2>Bomba de aceite</h2>
                     <p>para motor DD15, DD13, DD16 original Detroit</p>
-                    <a href="https://wa.me/50247764240?text=Hola%20quiero%20más%20información%20sobre%20bomba%20de%20aceite%20para%20dd15,DD13,DD16%20para%20motor%20detroit" target="_blank"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="Bomba de aceite para motor DD15, DD13, DD16 original Detroit" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-        <article class="box">
+        <article class="box" id="box" data-category="hidraulica">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/Bomba hidraulica2.jpg" alt="">
@@ -219,11 +283,11 @@
                 <div class="box-info">
                     <h2>Bomba hidraulica</h2>
                     <p>DD16 hidrodinamica marca TDP</p>
-                    <a href="https://wa.me/50247764240?text=Hola%20quiero%20más%20información%20sobre%20bomba%20de%20hidraulica%20dd16,hidraulica%20marca%20TDP" target="_blank"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="Bomba hidraulica DD16 hidrodinamica marca TDP" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-            <article class="box">
+            <article class="box" id="box" data-category="hidraulica">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/Bomba hidraulica2.webp" alt="">
@@ -233,11 +297,11 @@
                 <div class="box-info">
                     <h2>Bomba hidraulica</h2>
                     <p>para motor OM460</p>
-                    <a href="https://wa.me/50247764240?text=Hola%20quiero%20más%20información%20sobre%20bomba%20de%20hidraulica%20para%20motor%20OM460" target="_blank"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="Bomba hidraulica para motor OM460" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-            <article class="box">
+            <article class="box" id="box" data-category="hidraulica">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/bombahidraulicaOM460-2.png" alt="">
@@ -247,11 +311,11 @@
                 <div class="box-info">
                     <h2>Bomba Hidraulica</h2>
                     <p>para motor OM460 original TRW</p>
-                    <a href="https://wa.me/50247764240?text=Hola%20quiero%20más%20información%20sobre%20bomba%20de%20hidraulica%20para%20motor%20OM460" target="_blank"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="Bomba Hidraulica para motor OM460 original TRW" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-            <article class="box">
+            <article class="box" id="box" data-category="hidraulica">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/bombahidraulicaBOSCH12.jpg" alt="">
@@ -261,11 +325,11 @@
                 <div class="box-info">
                     <h2>Bomba hidraulica</h2>
                     <p>marca Bosch para motor 14 litros</p>
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="Bomba hidraulica marca Bosch para motor 14 litros" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-            <article class="box">
+            <article class="box" id="box" data-category="transferencia">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/Bomba de transferenciadetroit2.webp" alt="">
@@ -275,11 +339,11 @@
                 <div class="box-info">
                     <h2>Bomba de transferencia</h2>
                     <p>para motor Detroit 14litros 12.7</p>
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="Bomba de transferencia para motor Detroit 14litros 12.7" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-            <article class="box">
+            <article class="box" id="box" data-category="auxiliar">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/Bomba auxiliar de clutch2.jpg" alt="">
@@ -289,11 +353,11 @@
                 <div class="box-info">
                     <h2>Bomba auxiliar</h2>
                     <p>de clutch para cascadia marca Wabco  </p>
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="Bomba auxiliar de clutch para cascadia marca Wabco" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-            <article class="box">
+            <article class="box" id="box" data-category="auxiliar">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/Bomba auxiliar de clutch2.jpg" alt="">
@@ -303,11 +367,11 @@
                 <div class="box-info">
                     <h2>Bomba auxiliar</h2>
                     <p>para cascadia marca TDP</p>
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="Bomba auxiliar para cascadia marca TDP" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-            <article class="box">
+            <article class="box" id="box" data-category="auxiliar">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/bombaauxiliarclutch2-2.webp" alt="">
@@ -317,11 +381,11 @@
                 <div class="box-info">
                     <h2>Bomba auxiliar</h2>
                     <p>para Clutche para cascadia marca TDP</p>
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="Bomba auxiliar para Clutche para cascadia marca TDP" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-            <article class="box">
+            <article class="box" id="box" data-category="central">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/bombacentralcluche2.jpeg" alt="">
@@ -331,11 +395,11 @@
                 <div class="box-info">
                     <h2>Bomba central</h2><!--transmision-->
                     <p>para Clutche para cascadia marca TDP</p>
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="Bomba central para Clutche para cascadia marca TDP" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-            <article class="box">
+            <article class="box" id="box" data-category="transferencia">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/bombadetransferencia-2.jpg" alt="">
@@ -345,11 +409,11 @@
                 <div class="box-info">
                     <h2>Bomba de transferencia</h2>
                     <p>para motor Detroit 12.7</p>
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="Bomba de transferencia para motor Detroit 12.7" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-            <article class="box">
+            <article class="box" id="box" data-category="transferencia">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/Bomba de transferencia de combustible2.webp" alt="">
@@ -359,11 +423,11 @@
                 <div class="box-info">
                     <h2>Bomba de transferencia</h2>
                     <p>para combustible aplica motor 12.7 DDCE 3, DDEC 4, marca TDP</p>
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="Bomba de transferencia para combustible aplica motor 12.7 DDCE3" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-            <article class="box">
+            <article class="box" id="box" data-category="pedal">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/pedalparabomba-2.webp" alt="">
@@ -373,11 +437,11 @@
                 <div class="box-info">
                     <h2>Pedal para bomba</h2>
                     <p>para Clutch de cascadia marca TDP</p>
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="Pedal para bomba para Clutch de cascadia marca TDP" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-            <article class="box">
+            <article class="box" id="box" data-category="pedal">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/pedalclucht1.webp" alt="">
@@ -387,11 +451,11 @@
                 <div class="box-info">
                     <h2>Pedal con bomba</h2><!--sistema hidraulico-->
                     <p>central Clutche para Cascadia</p>
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="Pedal con bomba central Clutche para Cascadia" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
-            <article class="box">
+            <article class="box" id="box" data-category="secador">
                 <figure>
                     <div class="hover-img">
                         <img src="img/bomba/secadordeairecascadia-2.jpg" alt="">
@@ -401,7 +465,7 @@
                 <div class="box-info">
                     <h2>Secador de aire</h2><!--sistema de frenos-->
                     <p>para cascadia marca Wabco</p>
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</a>
+                    <button data-producto="Secador de aire para cascadia marca Wabco" id="openBtn" class="openBtn" href="#"><i class="fa-brands fa-whatsapp"></i>Cotizar ahora</button>
                 </div>
             </article>
 
@@ -448,7 +512,7 @@
      <!-----    servicios  ------>
      
 
-     <!----     footer   --->
+    <!----     footer   --->
      <footer>
         <section class="container-footer">
             <article class="footer-img">
@@ -457,9 +521,9 @@
                         <img class="img-desktop" src="img/LogoCorsomosa.png" alt="">
                     </figure>
                     <div class="footer-links">
-                        <a href="https://www.facebook.com/tuUsuarioFacebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/tuUsuarioFacebook" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.tiktok.com/tuUsuarioFacebook" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/p/Corsomosa-Repuestos-GT-61558709496280/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/corsomosa_gt/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@corsomosa.repuestosgt" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
                     </div>
             </article>
             <!----  ----->
@@ -469,22 +533,24 @@
                 <ul>
                     <li><a href="index.html#repuestos">repuestos</a></li>
                     <li><a href="service.html">taller</a></li>
-                    <li><a href="">express</a></li>
+                    <li><a href="#">express</a></li>
                     <li><a href="contact.html">contacto</a></li>
                 </ul>
             </article>
             <article class="footer-contact">
                     <a class="title" href="">contacto</a>
-                <span class="icon"><i class="fa-solid fa-phone"></i><a href="tel:+50212345678" target="_blank">+502 000-000</a></span>
-                <span class="icon"><i class="fa-solid fa-phone"></i><a href="mailto:tuCorreo@ejemplo.com?subject=Consulta%20de%20repuestos%20Web&body=Hola,%20necesito%20más%20información%20sobre%20repuestos." target="_blank">correoelectronico@gmail.com</a></span>
+                <span class="icon"><i class="fa-solid fa-phone"></i><a href="tel:+50212345678">+502 000-000</a></span>
+                <span class="icon" ><i class="fa-regular fa-envelope"></i><a href="mailto:tuCorreo@ejemplo.com?subject=Consulta%20de%20repuestos%20Web&body=Hola,%20necesito%20más%20información%20sobre%20repuestos.">correoelectronico@gmail.com</a></span>
             </article>
             <article class="footer-card">
                     <a class="title" href="">ubicacion</a>
                 <span class="link-local">
                     <h2>Venta de repuestos para cabezales</h2>
                     <h2>y taller automotriz</h2>
-                    <p>Colonia el Mirador, 1 ra Calle 20-35, <br> Cdad. de Guatemala 01011 <br>Contamos con parqueo </p>
+                    <p>Colonia el Mirador, 1 ra Calle 20-35, <br> Cdad. de Guatemala 01011 <br>Contamos con parqueo</p>
+                    
                     <a class="button-footer" href="https://ul.waze.com/ul?venue_id=176554130.1765868982.37244553&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank"><i class="fa-brands fa-waze"></i>ir con waze</a>
+                   
                 </span>
             </article>
             </div>
@@ -505,8 +571,15 @@
     <!----  scripts     ---->
     <script src="modules.js" type="module"></script>
     <script src="button-top.js"></script>
+    <script src="button-dinamico-box.js"></script>
     <!---   libreria AOS     ---->
     <script src="scroll-reveal.js"></script>
+    <script src="filtrer-button.js"></script>
+    <!---- backend-pagina -->
+    <script src="messaje-envio.js"></script>
+    <script src="googlesheets.js"></script>
+    <script src="modalForm.js"></script>    
+
 
 </body>
 </html>

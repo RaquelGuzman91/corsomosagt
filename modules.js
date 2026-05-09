@@ -1,3 +1,3 @@
 import menuHamburger from "./nav-icon.js";
 
-menuHamburger(".hamburger--vortex", ".nav-links", ".menu_link");
+menuHamburger(".hamburger--squeeze", ".nav-links", ".menu_link");
