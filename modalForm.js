@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const openBtns = document.querySelectorAll(".openBtn");
   const closeBtn = document.getElementById("closeBtn");
   const repuestoInput = document.getElementById("repuestoInput");
+  const submitbBtn = form.querySelector("button-form")
 
   // Abrir modal con cualquiera de los botones
   openBtns.forEach(btn => {
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
       repuestoInput.value = producto;
 
       // Mostrar el modal
-      modal.style.display = "block";
+      modal.style.display = "flex";
     });
   });
 
@@ -28,4 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.style.display = "none";
     }
   };
+
+
+
 });

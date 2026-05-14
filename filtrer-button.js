@@ -1,3 +1,4 @@
+//abre la ventana de los enlaces y los filtra
 const openButton = document.getElementById('open-filter');
 const closeButton = document.getElementById('close-filter');
 const sideNav = document.getElementById('main');

@@ -7,26 +7,26 @@
 }
 /* Oculto por defecto */
 .modal {
-display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: .5rem;
-    /* Fondo semi-transparente */
+ position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+backdrop-filter: blur(5px); /* aquí está la magia */
+background: rgba(0, 0, 0, 0.096); /* un poco de transparencia para oscurecer */
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+  display: none;
 }
-
 /* Caja del formulario */
 .modal-content {
-  background: white;
-  margin: auto;
-  padding: 2.5rem 2rem 2rem 2rem;
-  max-width: 600px;
+  background: #fff;
+  padding: 2rem;
   border-radius: 8px;
+  min-width: 300px;
   position: relative;
+box-shadow: 5px  5px 20px rgba(54, 54, 54, 0.4);
 }
 .modal-content h2{
     font-family: "Open Sans", sans-serif;
@@ -52,8 +52,9 @@ gap: .5rem;
 }
 .modal-content form label{
     text-transform: capitalize;
-    font-size: .9rem;
+    font-size: 1rem;
     font-weight: 600;
+    font-family: "Ubuntu", sans-serif;
 }
 /*------quitar flechas en input numbers-------*/
 input[type=number]::-webkit-inner-spin-button,
@@ -67,12 +68,14 @@ input[type=number]::-webkit-outer-spin-button{
 .modal-content form .input-grid .input-grid,
 .modal-content form input{
 width: 100%;
-padding: .5rem;
-font-size: .9rem;
+padding: .7rem;
+font-size: 1rem;
 border: 1px solid #23325F;
 border-radius: 5px;
 outline: none;
 font-weight: 100;
+font-family: "Ubuntu", sans-serif;
+
 }
 .modal-content form .button-form{
 background: #23325F;
@@ -82,7 +85,6 @@ font-size: 1rem;
 border: none;
 margin-top: 1.5rem;
 cursor: pointer;
-transition: all 500ms ease;
 }
 .modal-content form .button-form:hover{
 background: #595957;
@@ -90,7 +92,25 @@ background: #595957;
 /* Botón cerrar */
 .close {
   position: absolute;
-  top: 10px; right: 15px;
-  font-size: 2.5rem;
+  top: 10px;
+  right: 15px;
+  font-size: 3.4rem;
   cursor: pointer;
+}
+
+/*----------------*/
+@media(max-width: 450px){
+    .modal-content {
+  width: 100%;
+  margin: 1rem;
+}
+    .modal-content form .input-grid{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center ;
+    grid-template-columns: 1fr;
+    gap: .7rem;
+    margin-bottom: .3rem;
+}
 }

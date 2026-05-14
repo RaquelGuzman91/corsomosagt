@@ -279,7 +279,7 @@ html{
     font-family: "Open Sans", sans-serif;
     text-decoration: none;
     color: white;
-    transition: all 500ms ease;
+
     border: none;
 }
 .workshop .container-worshop .box .box-info .openBtn:hover{
@@ -387,7 +387,12 @@ html{
     width: 100%;
 }
 }
+@media(max-width:450px){
+    .workshop #main{
+    width: 70%;
 
+}
+}
 
 /*----  phrase  ---*/
 @media(max-width: 580px){

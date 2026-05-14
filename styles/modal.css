@@ -16,6 +16,7 @@
     z-index: 9999;              /* encima de todo */
   }
    #custom-alert {
+    height: 200px;
     min-width: 300px;
     max-width: 500px;
     text-align: center;
@@ -28,7 +29,10 @@
     transition: opacity 0.3s ease;
     opacity: 0;
     z-index: 200;
-    position: absolute;
+      position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     white-space: pre-line; /* respeta los \n */
   }
   #custom-alert.show {
