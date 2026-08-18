@@ -240,3 +240,11 @@ html{
     width: 70%;
 }
 }
+@media(max-width: 460px){
+    .workshop .container-worshop{
+    width: 99%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    gap: 2rem;
+}
+}

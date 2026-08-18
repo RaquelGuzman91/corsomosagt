@@ -39,12 +39,12 @@ header .networks .links{
 header .networks .links a,
 header .networks .info span i{
     /*font-size: 1.2rem;*/
-    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    font-size: clamp(.8rem, 1.2vw, 1.2rem);
 }
 header .networks .links h2,
 header .networks .info span{
     /*font-size: 1rem;*/
-    font-size: clamp(.9rem, 1vw, 1rem);
+    font-size: clamp(.8rem, 1vw, 1rem);
 }
 header .networks .links a{
     color: #F6F6F5;
