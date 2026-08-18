@@ -9,7 +9,7 @@
                 arrows     : false,
                 pagination : false,
                 gap        : '1rem', // espacio entre imágenes
-                interval    : 3000,       // tiempo entre cambios (ms)
+                interval    : 2000,       // tiempo entre cambios (ms)
                 pauseOnHover: true,      // no se detiene al pasar el mouse
                 breakpoints: {
                 890    : { perPage: 4 }, // en pantallas medianas muestra 3

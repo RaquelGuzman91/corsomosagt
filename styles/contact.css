@@ -28,7 +28,7 @@ html{
 .index{
     width: 100%;
     min-height: 30vh;
-    background-image: url('../img/banner-contact-small.png');
+    background-image: url('../img/banner-contact.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -242,7 +242,7 @@ html{
     font-size: 1rem;
     text-transform: capitalize;
     padding: 1rem 2rem;
-    border-radius: 40px;
+    border-radius: 10px;
     border: none;
     transition: all 500ms ease;
     cursor: pointer;
