@@ -33,15 +33,23 @@ header .networks .links{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: clamp(.5rem, 1vw, 1rem);
     color: #F6F6F5;
+}
+header .networks .links a,
+header .networks .info span i{
+    /*font-size: 1.2rem;*/
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+}
+header .networks .links h2,
+header .networks .info span{
+    /*font-size: 1rem;*/
+    font-size: clamp(.9rem, 1vw, 1rem);
 }
 header .networks .links a{
     color: #F6F6F5;
-    font-size: 1.3rem;
 }
 header .networks .links h2{
-    font-size: .9rem;
     font-weight: 100;
     color: rgb(255, 242, 126);
 
@@ -50,18 +58,16 @@ header .networks .info{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: clamp(.5rem, 1vw, 1rem);
 }
 header .networks .info span{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: .9rem;
-    gap: .5rem;
+    gap: clamp(.1rem, .5vw, .5rem);
 }
 header .networks .info span i{
     color: rgb(255, 242, 126);
-    font-size: 1.2rem;
 }
 header .networks .info span a{
     color: #F6F6F5;
@@ -200,29 +206,13 @@ header {
     box-shadow: 5px  5px 20px rgba(54, 54, 54, 0.4);
 }
 }
-@media(max-width:409px){
-    .header .networks a,
-    .header .networks h2,
-    header .networks .info span i,
-    header .networks .links h2,
-    header .networks .links a,
-    header .networks .info span{
-        font-size: .8rem;
-    }
-    
-
-}   
+  
 @media(max-width: 507px){
     header nav li span .button-nav{
     display: none;
 }
 }
-@media(max-width: 970px){
-    html{
-        font-size: 90%;
-    }
-    
-}
+
 
 @media(max-width: 395px){
     html{

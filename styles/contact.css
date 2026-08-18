@@ -81,7 +81,7 @@ html{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: clamp(.5rem, 3vw, 3rem) clamp(.5vw, .5vw, .5rem);
+    padding: clamp(.5rem, 3vw, 3rem) clamp(.5vw, 1vw, 1rem);
     gap: .5rem;
 }
 .phrase h3{
@@ -140,20 +140,19 @@ html{
 
 /*----  spare   -----*/
 .phrase .section-form{
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: start;
     flex-wrap: wrap;
     gap: 2rem;
-    padding: clamp(.5rem, 4vw, 4rem);
 }
 .phrase .section-form  .form-container,
 .phrase .section-form  .form-info{
     flex: 1 1 20rem;
 }
 .phrase .section-form .form-container form{
-    padding: 2rem;
+    padding: clamp(1rem, 2vw, 2rem);
     display: flex;
     flex-direction: column;
     justify-content: stretch;
@@ -271,7 +270,7 @@ html{
 }
 .phrase .section-form .form-info .form-title h2{
     color: #131E31;
-    font-size: 2rem;
+    font-size: clamp(1.4rem, 2vw, 2rem);
 }
 .phrase .section-form .form-info .form-title p{
     color: #4b4b49;
@@ -294,13 +293,13 @@ html{
 }
 .phrase .section-form .form-info .infos .info-text a{
     color: white;
-    background: #131E31;
+    background: #23325F;
     font-size: 1.5rem;
     padding: .5rem .5rem;
     border-radius: 8px;
 }
 .phrase .section-form .form-info .infos .info-text h2{
-    color: #131E31;
+    color: #4b4b49;
     font-size: 1rem;
     font-weight: 800;
 }
@@ -406,5 +405,19 @@ html{
     grid-template-columns: repeat(1, 1fr);
 }
 }
+@media(max-width: 990px){
+    .phrase .section-form{
+    width: 100%;
 
+}
+}
+@media(max-width: 948px){
+    .phrase .section-form .form-info .infos{
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    gap: 1rem;
+    padding-top: clamp(.5rem, 1vw, 1rem);
+    padding-bottom: clamp(.5rem, 1vw, 1rem);
+}
+}
 /*---   nuestros repuestos -----*/
