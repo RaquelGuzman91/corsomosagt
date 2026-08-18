@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+/*------   workshop   ----*/
+.workshop{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: clamp(.1rem, 4vw, 5rem);
+    /*padding: 5rem .5rem;*/
+}
+/*------*/
+.workshop .container-worshop{
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    gap: 2rem;
+}
+/*-------BOTONES-INICIO-SECCION-TARJETA-----*/
+.workshop .workshop-open{
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    gap: 2rem;
+    text-decoration: none;
+}
+.workshop .workshop-open .open-filter{
+   text-decoration: none;
+   font-family: "Open Sans", sans-serif;
+   padding: .5rem 2rem;
+   font-size: 1rem;
+   font-weight: 100;
+   background: #23325F;
+    color: white;
+    padding: .5rem 2rem;
+    transition: all 500ms ease;
+}
+.workshop .workshop-open .open-filter i{
+   padding-left: 1rem;
+}
+.workshop .open-filter:hover{
+    background: #192444;
+}
+.workshop .workshop-open .data-all{
+    font-family: "Open Sans", sans-serif;
+    
+    color: #131E31;
+    font-size: 1rem;
+    font-weight: 100;
+
+}
+
+/*-----TARJETAS--------*/
+.workshop .container-worshop .box{
+    width: 100%;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 1rem;
+    border: 1px solid #b8b8b898;
+    border-radius: 20px;
+    box-shadow: 5px  5px 20px rgba(54, 54, 54, 0.4);
+    text-align: center;
+    transition: all .4s;
+}
+/*---   script  -----*/
+
+.workshop .container-worshop .box figure{
+    width: 100%;
+    height: 68%;
+    position: relative;
+}
+.workshop .container-worshop .box figure .hover-img{
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    position: absolute;
+    opacity: 0;
+    transition: .4s ease-in-out;
+    background: white;
+}
+.workshop .container-worshop .box figure:hover .hover-img{
+    opacity: 1;
+}
+.workshop .container-worshop .box figure .hover-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.workshop .container-worshop .box figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.workshop .container-worshop .box .box-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    gap: .6rem;
+    padding-top: 1rem;
+}
+.workshop .container-worshop .box .box-info h2{
+    font-size: 1.5rem;
+    font-family: "Ubuntu", sans-serif;
+    color: #131E31;
+}
+.workshop .container-worshop .box .box-info p{
+    font-size: 1.1rem;
+    font-weight: 300;
+    font-family: "Ubuntu", sans-serif;
+    color: #131E31;
+}
+.workshop .container-worshop .box .box-info .openBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #23325F;
+    width: 100%;
+    text-align: center;
+    padding: .5rem;
+    font-size: 1.2rem;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+.workshop .container-worshop .box .box-info .openBtn:hover{
+    background: #818181;
+}
+.workshop .container-worshop .box .box-info i{
+    font-size: 2rem;
+}
+
+/*----VENTANA-BOTON-FILTAR-POR-CATEGORIA---*/
+.workshop #main{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    z-index: 6;
+    left: -100%;
+    top: 0;
+    background: white;
+    padding-top: 5rem;
+    position: fixed;
+    transition:  .4s ease-in-out;
+    z-index: 50;
+    padding: 2rem 1rem;
+    padding-top: 4rem;
+    overflow-y: auto;
+}
+#main.open{
+    left: 0;
+}
+ #overlay-filter{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    backdrop-filter: blur(5px); /* aquí está la magia */
+    background: rgba(0, 0, 0, 0.096); /* un poco de transparencia para oscurecer */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 40;
+}
+#overlay-filter.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.workshop main .ul-link{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    gap: 1.5rem;
+}
+.workshop main .ul-link li a{
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: black;
+}
+.workshop main .ul-link li i{
+    color: #dbdbdb;
+    padding-right: 1.5rem;
+}
+/*-----*/
+.workshop main .close-filter{
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: black;
+}
+.workshop .open-filter{
+    padding: 1rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+/*---   nuestros repuestos -----*/
+@media(max-width: 430px){
+    .workshop .workshop-open{
+    width: 100%;
+}
+}
+@media(max-width:450px){
+    .workshop #main{
+    width: 70%;
+}
+}

@@ -28,7 +28,7 @@ html{
 .index{
     width: 100%;
     min-height: 30vh;
-    background-image: url('../img/index-repuestos-min.jpg');
+    background-image: url('../img/index-repuesto.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -177,42 +177,6 @@ html{
 
 /*---   phrase  ---*/
 /*-----     brands  ------*/
-.brands{
-    width: 100%;
-    min-height: 60vh;
-    padding: 2rem .5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.brands h2{
-    font-family: "Open Sans", sans-serif;
-    color: #bbbbbb;
-    font-weight: 500;
-    text-transform: capitalize;
-}
-.brands .brands-container{
-    width: 80%;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-    gap: 1rem;
-    padding: 1rem 0px;
-}
-.brands .brands-container figure{
-    width: 100%;
-    height: 110px;
-   
-}
-.brands .brands-container figure img{
-    width: 100%;
-    height: 100%;
-     object-fit: contain;
-}
-
-
 /*-----     section-button      -----*/
 
 /*----  spare   -----*/

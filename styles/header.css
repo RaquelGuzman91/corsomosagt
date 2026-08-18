@@ -28,8 +28,6 @@ header .networks{
     background: #23325F;
     font-family: "Instrument Sans", sans-serif;
     z-index: 22;
- 
-
 }
 header .networks .links{
     display: flex;
@@ -40,6 +38,7 @@ header .networks .links{
 }
 header .networks .links a{
     color: #F6F6F5;
+    font-size: 1.3rem;
 }
 header .networks .links h2{
     font-size: .9rem;
@@ -61,7 +60,8 @@ header .networks .info span{
     gap: .5rem;
 }
 header .networks .info span i{
-    color: rgb(255, 255, 32);
+    color: rgb(255, 242, 126);
+    font-size: 1.2rem;
 }
 header .networks .info span a{
     color: #F6F6F5;
@@ -202,9 +202,15 @@ header {
 }
 @media(max-width:409px){
     .header .networks a,
-    .header .networks h2{
+    .header .networks h2,
+    header .networks .info span i,
+    header .networks .links h2,
+    header .networks .links a,
+    header .networks .info span{
         font-size: .8rem;
     }
+    
+
 }   
 @media(max-width: 507px){
     header nav li span .button-nav{
@@ -216,4 +222,10 @@ header {
         font-size: 90%;
     }
     
+}
+
+@media(max-width: 395px){
+    html{
+    font-size: 80%;
+}
 }

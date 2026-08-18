@@ -28,7 +28,7 @@ html{
 .index{
     width: 100%;
     min-height: 30vh;
-    background-image: url('../img/banner-contact.jpg');
+    background-image: url('../img/banner-contact-small.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -81,7 +81,7 @@ html{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3rem .5rem;
+    padding: clamp(.5rem, 3vw, 3rem) clamp(.5vw, .5vw, .5rem);
     gap: .5rem;
 }
 .phrase h3{
@@ -140,25 +140,26 @@ html{
 
 /*----  spare   -----*/
 .phrase .section-form{
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     flex-wrap: wrap;
     gap: 2rem;
-    padding: 2rem .5rem;
+    padding: clamp(.5rem, 4vw, 4rem);
 }
-.phrase .section-form .form-container{
+.phrase .section-form  .form-container,
+.phrase .section-form  .form-info{
     flex: 1 1 20rem;
 }
 .phrase .section-form .form-container form{
-    width: 100%;
-    padding: 1rem 0px;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     gap: 1rem;
-    
+    background: #5a637c25;
+    border-radius: 10px;
 }
 .phrase .section-form .form-container form .form-input{
     display: grid;
@@ -187,7 +188,7 @@ html{
     color: #595957;
     border-radius: 10px;
     outline: none;
-    
+    background: white;
 }
 .phrase .section-form .form-container form .form-textarea{
     display: flex;
@@ -201,6 +202,7 @@ html{
     flex-direction: column;
     justify-content: left;
     align-items: left;
+    
 }
 .phrase .section-form .form-container form .form-textarea .input-textarea label{
     padding-bottom: .5rem;
@@ -218,6 +220,7 @@ html{
     color: #595957;
     border-radius: 10px;
     outline: none;
+    background: white;
 }
 .phrase .section-form .form-container form .form-textarea .input-textarea textarea{
     background: none;
@@ -229,6 +232,7 @@ html{
     outline: none;
     font-family: "Roboto", sans-serif;
     resize: none;
+    background: white;
 }
 .phrase .section-form .form-container form .button-form{
     margin-top: 1rem;
@@ -253,46 +257,86 @@ html{
 
 /*-----     form-info  ------*/
 .phrase .section-form .form-info{
-    flex: 1 1 20rem;
-}
-.phrase .section-form .form-info{
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items: left;
-    background: #142453;
+    justify-content: start;
+    align-items: start;
     border-radius: 20px;
-    padding: 2rem;
+    padding: clamp(.5rem, 2vw, 2rem);
     gap: 2rem;
 }
-.phrase .section-form .form-info .info-text h2{
-    font-size: 1.3rem;
-    color: #F6F6F5 ;
-    padding-bottom: .6rem;
-    font-weight: 600;
-    font-family: "Saira", sans-serif;
+.phrase .section-form .form-info .form-title{
+    padding-bottom: clamp(.5rem, 1vw, 1rem);
+    padding-top: clamp(.5rem, 1vw, 1rem);
 }
-.phrase .section-form .form-info .info-text p{
+.phrase .section-form .form-info .form-title h2{
+    color: #131E31;
+    font-size: 2rem;
+}
+.phrase .section-form .form-info .form-title p{
+    color: #4b4b49;
     font-size: 1rem;
-    color: #F6F6F5  ;
-    font-family: "Roboto", sans-serif;
-    font-weight: 200;
+    font-family: "Open Sans", sans-serif;
 }
-.phrase .section-form .form-info .info-text .forms-icons{
-    display: flex;
+.phrase .section-form .form-info .infos{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
     gap: 1rem;
-    
+    padding-top: clamp(.5rem, 1vw, 1rem);
+    padding-bottom: clamp(.5rem, 1vw, 1rem);
 }
-.phrase .section-form .form-info .info-text .forms-icons a{
-    background: #ff9b05;
+.phrase .section-form .form-info .infos .info-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+}
+.phrase .section-form .form-info .infos .info-text a{
+    color: white;
+    background: #131E31;
+    font-size: 1.5rem;
+    padding: .5rem .5rem;
+    border-radius: 8px;
+}
+.phrase .section-form .form-info .infos .info-text h2{
+    color: #131E31;
+    font-size: 1rem;
+    font-weight: 800;
+}
+.phrase .section-form .form-info .infos .info-text p{
+    color: #4b4b49;
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+}
+.phrase .section-form .form-info .info-redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: clamp(.5rem, 1vw, 1rem);
+    padding-bottom: clamp(.5rem, 1vw, 1rem);
+    gap: 1rem;
+}
+.phrase .section-form .form-info .info-redes h2{
+    color: #131E31;
+    font-size: .9rem;
+    text-transform: capitalize;
+}
+.phrase .section-form .form-info .info-redes .info-redes-iconos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+.phrase .section-form .form-info .info-redes a{
+    color: white;
+    background: #131E31;
     padding: .5rem;
-    font-size: 1.7rem;
-    color: #F6F6F5;
-    border-radius: 50%;
-    
+    font-size: 1rem;
+    border-radius: 10px;
 }
-
-
 /*------    map  -----*/
 .map{
     width: 100%;
@@ -357,12 +401,7 @@ html{
 }
 }
 
-@media(max-width: 1000px){
-    .phrase .section-form{
-    width: 100%;
-}
-}
-@media(max-width:780px){
+@media(max-width:1200px){
     .phrase .section-form .form-container form .form-input{
     grid-template-columns: repeat(1, 1fr);
 }

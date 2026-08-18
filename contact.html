@@ -8,38 +8,51 @@
     <meta name="keywords" content="código, HTML, y más">   <meta name="Url" content="">
     <title>Corsomosa | Contacto</title>
     <link rel="icon" type="image/x-icon" href="img/favicon-x-08editado.png">
-    <link rel="stylesheet" href="styles/contact.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/iconsbutton-styles.css">
     <!-- -- iconos fontsawesome ------>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!---- -->
     <!--libreria hamburgers     -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="hamburgers-master/dist/hamburgers.css">
+    <!--- libreria splide.js--->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <!----      AOS-libreria      -->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/iconsbutton-styles.css">
+    <link rel="stylesheet" href="styles/envioformulario.css">
+    <link rel="stylesheet" href="styles/sliders-repuesto.css">
+    <!----- ----->
+    <script src="./JS/header.js" type="module"></script>
+    <script src="./JS/data.js" type="module"></script>
+    <script src="./JS/sliders-marcas-script.js"></script>
+
+    
+    
 
 </head>
 <body>
 
-    <!----  header  ----->
-    <header class="header" >
-        <section class="networks">
+
+  <!----  header  -----> 
+    <header class="header">
+        <section  class="networks">
             <article class="links">
                 <h2>Siguenos</h2>
-                <a href="https://www.facebook.com" target="_blank" rel="no-referrer"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com" target="_blank" rel="no-referrer"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.gmail.com" target="_blank" rel="no-referrer"><i class="fa-regular fa-envelope"></i></a>
+                <a id="red-facebook" target="_blank" rel="no-referrer"><i class="fa-brands fa-facebook"></i></a>
+                <a id="red-instagram" target="_blank" rel="no-referrer"><i class="fa-brands fa-instagram"></i></a>
+                <a id="red-correo" target="_blank"><i class="fa-regular fa-envelope"></i></a>
             </article>
             <article class="info">
-                <span><i class="fa-solid fa-location-dot"></i><a href="https://maps.app.goo.gl/ShfzEJKvdJ9ievv99" target="_blank" rel="no-referrer">Ubicación</a></span>
-                <span><i class="fa-solid fa-phone"></i><a href="tel:+50247764240" target="_blank" rel="no-referrer">Llamanos ahora</a></span>
+                <span><i class="fa-solid fa-location-dot"></i><a id="red-location" target="_blank" rel="no-referrer">Ubicación</a></span>
+                <span><i class="fa-solid fa-phone"></i><a id="red-telefono">Llamanos ahora</a></span>
             </article>
-        </section>
+        </section> 
 
-        <!---    nav     ----->
+        <!---    nav    -->
         <nav>
             <a class="logo" href="index.html">
                 <img src="img/LogoCorsomosa-small.png"  alt="">
@@ -47,13 +60,14 @@
 
             <div class="navigation">
                 <ul class=" panel menu_list nav-links">
-                  <li><a class="menu_link" href="index.html" rel="no-referrer">Inicio</a></li>
-                  <li><a class="menu_link" href="index.html#repuestos" rel="no-referrer">Repuestos</a></li>
-                  <li><a class="menu_link" href="service.html" rel="no-referrer">Servicios</a></li>
-                  <li><a class="menu_link active" href="contact.html" rel="no-referrer">Contacto</a></li>
+                  <li><a class="menu_link" id="header-inicio" rel="no-referrer">Inicio</a></li>
+                  <li><a class="menu_link " id="header-repuestos" rel="no-referrer">Repuestos</a></li>
+                  <li><a class="menu_link" id="header-servicio" rel="no-referrer">Servicios</a></li>
+                  <li><a class="menu_link active" id="header-contacto" rel="no-referrer">Contacto</a></li>
                 </ul>
-                <li><span><a class="button-nav" href="https://ul.waze.com/ul?venue_id=176554130.1765868982.37244553&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location&navigate=yes" target="_blank" rel="no-referrer"><i class="fa-brands fa-waze"></i>Como Llegar</a></span></li>
-            <!----- NAV-RESPONSIVE  ------>
+                <li><span><a class="button-nav" id="red-waze" target="_blank" rel="no-referrer"><i class="fa-brands fa-waze"></i>Como Llegar</a></span></li>
+            
+                <!----- NAV-RESPONSIVE    ------>                                   
                 <button class="hamburger hamburger--squeeze" type="button">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
@@ -62,9 +76,8 @@
             </div>
             
             
-            
         </nav>
-    </header>
+    </header> 
     
     <!---- section-index  ---->
     <section id="inicio" class="index">
@@ -76,9 +89,9 @@
                 <a href="#">asesores</a>
             </div>
         </article>
-        <div class="icon-float">
-            <a href="https://wa.me/50212345678" target="_blank" rel="no-referrer"><i class="fa-brands fa-whatsapp"></i></a>
-        </div>
+
+        <!-------->
+        <div id="icon-float"></div>
     </section>
 
     <!-- --- section-title -->
@@ -89,7 +102,7 @@
         
         <article class="section-form">
             <div class="form-container">
-                <form id="" action="https://formbold.com/s/oavOq" method="post" >
+                <form action="https://formbold.com/s/oavOq" method="post" id="contact-form">
                     <div class="form-input">
                         <div class="input-label">
                             <label for="">nombre *</label>
@@ -127,7 +140,14 @@
 
                 <!-------- -->
                 <!-- modal oculto   -->
-                 
+                 <div id="thankyou-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <img src="./img/favicon-x-08editado.png" alt="">
+                        <h2>¡Gracias!</h2>
+                        <p>Tu mensaje fue enviado exitosamente. <br>Te responderemos pronto....</p>
+                    </div>
+                 </div>
                  <!-----     script    ---->
                 
 
@@ -139,94 +159,68 @@
 
             <!----  section-info     ----->
             <aside class="form-info">
-                <article class="info-text">
-                    <h2>dirección</h2>
-                    <p>Colonia el Mirador, 1 ra Calle 20-35, <br> Cdad. de Guatemala 01011t</p>
+                <article class="form-title">
+                    <h2>Comunicate con nosotros</h2>
+                    <p>Nuestros horarios de atencion: lunes a viernes de 8:00am a 5:00pm, sabado y domingo cerrado </p>
                 </article>
-                <article class="info-text">
-                    <h2>contacto</h2>
-                    <p>Telefono: 000-000</p>
-                </article>
-                <article class="info-text">
-                    <h2>horario de atención</h2>
-                    <p>lunes - viernes : 08:00am - 05:00pm</p>
-                    <p>sabado y domingo : cerrado</p>
-                    <p>Contamos con parqueo</p>
-                </article>
-                <article class="info-text">
-                    <h2>siguenos por</h2>
-                    <div class="forms-icons">
-                        <a href="https://www.facebook.com/tuUsuarioFacebook" target="_blank" rel="no-referrer"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/tuUsuarioFacebook" target="_blank" rel="no-referrer"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.tiktok.com/tuUsuarioFacebook" target="_blank" rel="no-referrer"><i class="fa-brands fa-tiktok"></i></a>
-                    </div>
-                </article>
+                <figure class="infos">
+                    <article class="info-text">
+                            <a id="red-facebook" target="_blank" rel="no-referrer"><i class="fa-solid fa-phone"></i></a>
+                        <div>
+                            <h2>Telefono</h2>
+                            <p>(+502) <span id="info-telefono"></span></p>
+                        </div>
+                    </article>
+                    <article class="info-text">
+                            <a id="red-facebook" target="_blank" rel="no-referrer"><i class="fa-regular fa-envelope"></i></a>
+                        <div>
+                            <h2>Correo</h2>
+                            <p id="info-correo"><span>Corsomosagt@gmail.com</span></p>
+                        </div>
+                    </article>
+                    <article class="info-text">
+                            <a id="red-facebook" target="_blank" rel="no-referrer"><i class="fa-solid fa-location-dot"></i></a>
+                        <div>
+                            <h2>Direccion</h2>
+                            <p id=""></span>Zona 11 de Guatemala</p>
+                        </div>
+                    </article>
+                    <article class="info-text">
+                            <a id="red-instagram" target="_blank" rel="no-referrer"><i class="fa-brands fa-instagram"></i></a>
+                        <div>
+                            <h2>Instagram</h2>
+                            <p>instagram<span id="info-telefono"></span></p>
+                        </div>
+                    </article>
+                </figure>
+
+                <article class="info-redes">
+                        <h2>siguenos por nuestras redes sociales</h2>
+                        <figure class="info-redes-iconos">
+                            <a id="red-facebook" target="_blank" rel="no-referrer"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a id="red-instagram" target="_blank" rel="no-referrer"><i class="fa-brands fa-instagram"></i></a>
+                            <a id="red-tiktok" target="_blank" rel="no-referrer"><i class="fa-brands fa-tiktok"></i></a>
+                        </figure>
+                    </article>
             </aside>
-        </article>
-     </section>
+            </article>
+            </section>
 
      <section class="section-button">
         <button id="button-top" class="button-sect" herf="#" ><i class="fa-solid fa-angle-up"></i></button>
      </section>
 
+    <!---SLIDERS-REPUESTOS-->
+    <section class="sliders-repuestos" id="sliders-repuestos"></section>
+
      <!---- section-spare ------>
      <section class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.591078320579!2d-90.55366272615775!3d14.62235547654619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a14a09acb845%3A0x8b3d8255295d1ea0!2sCorsomosa%20-%20Repuestos%20para%20Cabezal!5e0!3m2!1ses-419!2sgt!4v1766626297084!5m2!1ses-419!2sgt" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
      </section>
-
-     <!----- marcas  ----->
-     
-
-     <!----     us  ------->
-     
-
-     <!-----    servicios  ------>
      
 
      <!----     footer   --->
-     <footer>
-        <section class="container-footer">
-            <article class="footer-img">
-                    <figure>
-                        <img class="img-phone" src="img/logo-phone.png" alt="">
-                        <img class="img-desktop" src="img/LogoCorsomosa.png" alt="">
-                    </figure>
-                    <div class="footer-links">
-                        <a href="https://www.facebook.com/p/Corsomosa-Repuestos-GT-61558709496280/" target="_blank" rel="no-referrer"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/corsomosa_gt/" target="_blank" rel="no-referrer"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.tiktok.com/@corsomosa.repuestosgt" target="_blank" rel="no-referrer"><i class="fa-brands fa-tiktok"></i></a>
-                    </div>
-            </article>
-            <!----  ----->
-            <div class="footer-text">
-                <article class="footer-card">
-                    <a class="title" href="">enlaces rapidos</a>
-                <ul>
-                    <li><a href="index.html#repuestos" rel="no-referrer">repuestos</a></li>
-                    <li><a href="service.html" rel="no-referrer">taller</a></li>
-                    <li><a href="#">express</a></li>
-                    <li><a href="contact.html" rel="no-referrer">contacto</a></li>
-                </ul>
-            </article>
-            <article class="footer-contact">
-                    <a class="title" href="">contacto</a>
-                <span class="icon"><i class="fa-solid fa-phone"></i><a href="tel:+50212345678" rel="no-referrer">+502 000-000</a></span>
-                <span class="icon" ><i class="fa-regular fa-envelope"></i><a href="mailto:rakelguzman91@gmail.com?subject=Consulta%20de%20repuestos%20Web&body=Hola,%20necesito%20más%20información%20sobre%20repuestos." rel="no-referrer">correoelectronico@gmail.com</a></span>
-            </article>
-            <article class="footer-card">
-                    <a class="title" href="">ubicacion</a>
-                <span class="link-local">
-                    <h2>Venta de repuestos para cabezales</h2>
-                    <h2>y taller automotriz</h2>
-                    <p>Colonia el Mirador, 1 ra Calle 20-35, <br> Cdad. de Guatemala 01011 <br>Contamos con parqueo</p>
-                    
-                    <a class="button-footer" href="https://ul.waze.com/ul?venue_id=176554130.1765868982.37244553&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank" rel="no-referrer"><i class="fa-brands fa-waze"></i>ir con waze</a>
-                   
-                </span>
-            </article>
-            </div>
-        </section>
-     </footer>
+     <footer></footer>
 
 
     <div class="copyright">
@@ -240,11 +234,15 @@
 
 
     <!----  scripts     ---->
-    <script src="modules.js" type="module"></script>
-    <script src="button-top.js"></script>
+    <script src="./JS/icon-float.js" type="module"></script>
+    <script src="./JS/footer.js" type="module"></script>
+    <script src="./JS/modules.js" type="module"></script>
+    <script src="./JS/button-top.js"></script>
+    <script src="./COR/envioformulario.js"></script>
+    <script src="./JS/sliders-repuesto-render.js"></script>
     
     <!---   libreria AOS     ---->
-    <script src="scroll-reveal.js"></script>
+    <script src="./JS/scroll-reveal.js"></script>
 
 </body>
 </html>

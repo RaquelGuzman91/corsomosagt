@@ -1,0 +1,32 @@
+.sliders-repuestos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem .5rem;
+}
+.sliders-repuestos .splide{
+    width: 95%;
+}
+/*
+.sliders-repuestos .splide .splide__track{
+
+}
+.sliders-repuestos .splide .splide__track .splide__list{
+
+}*/
+.sliders-repuestos .splide .splide__track .splide__list .splide__slide{
+    padding: 1rem;
+    border: 2px solid #23325f38;
+    border-radius: 20px;
+}
+.sliders-repuestos .splide .splide__track .splide__list .splide__slide img{
+    height: 230px;
+    width: 100%;
+    object-fit: contain;
+    transition: all 500ms ease;
+}
+/*
+.sliders-repuestos .splide:hover{
+
+}*/
