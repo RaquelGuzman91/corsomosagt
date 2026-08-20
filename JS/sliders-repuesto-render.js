@@ -1,7 +1,7 @@
 function crearSlidersRepuesto() {
     const SlidersRepuesto = document.getElementById("sliders-repuestos");
     SlidersRepuesto.innerHTML = `
-    <section class="splide splide1" aria-label="Splide Basic HTML Example">
+    <section class="splide splide2" aria-label="Splide Basic HTML Example">
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide"><img src="./img/asesorios/aceitera1.webp" alt=""></li>
